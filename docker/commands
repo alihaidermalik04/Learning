@@ -1,0 +1,102 @@
+---------------------------
+Download and run an image
+----------------------------
+
+$ docker container run --publish 80:80 ngnix
+
+the command will look for image for ngnix and run its container on port 80:80
+
+$ docker container run --publish 80:80 -d ngnix
+
+the command will run the container in the background while using -d
+
+$ docker container run --public 80:80 -d NAME_CONTAINER ngnix
+
+the command will create a container of ngnix with the name speacified
+
+$ docker container run --public 80:80 -d NAME_CONTAINER -e ENVIRONMENT_VARIBLE_TO_PASS ngnix
+
+the command with -e and defined the environment varible you want to pass to the container
+
+
+-----------------------------------
+List the container
+----------------------------------
+
+$ docker ps
+$ docker container ls
+
+shows the list of running container
+
+$ docker ps -a
+$ docker container ls -a
+
+shows the list of all container
+
+
+-----------------------------------
+Stop the container
+----------------------------------
+
+$ docker container stop CONTAINER_ID
+
+stops the list of container
+
+-----------------------------------
+remove the container
+----------------------------------
+
+$ docker container rm CONTAINER_ID
+
+removes the container if its stoped
+
+$ docker container rm -f CONTAINER_ID
+
+removes the container force fully
+
+-----------------------------------
+logs of the container
+----------------------------------
+
+$ docker container logs NAME_CONTAINER
+
+displays the logs of the container who's name is speacified
+
+-----------------------------------
+see process inside the container
+----------------------------------
+
+$ docker top NAME_CONTAINER
+
+displays the process running insdie the container
+
+-----------------------------------
+see process inside the container
+----------------------------------
+
+$ docker top NAME_CONTAINER
+
+displays the process running insdie the container
+
+-----------------------------------
+Shows the container configurations
+----------------------------------
+
+$ docker container inspect CONTAINER_ID
+
+displays the configurations of the container
+
+-----------------------------------
+Shows the container stats
+----------------------------------
+
+$ docker container stats 
+
+displays the stats of all the container
+
+-------------------------------------
+Go inside a container
+-------------------------------------
+
+docker container exec -it proxy ngnix bash
+
